@@ -24,20 +24,6 @@ const PlayerForm = () => {
                 };
                 setErrors(errorArr);
             })
-           // .then((response) => {
-             //   if(response.data.errors) {
-               //     console.log(response.data.errors);
-                 //   setErrors(response.data.errors);
-
-       //         } else {
-         //           console.log(response.data);
-           //         navigate(`/players/list`);
-        //        }
-          //  })
-         //   .catch(err=>{
-           //     console.log(err);
-          //  })
-            
     };
 
     return (

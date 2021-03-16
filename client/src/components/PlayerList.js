@@ -15,14 +15,11 @@ const PlayerList = (props) => {
                     console.log(err);
                 }))
         }, [])
-    
-    const deletePlayer = (id) => {
-        axios.delete('http://localhost:8000/api/' + id)
+    const {removeFromDom} = props;
+    const deletePlayer = (playerId) => {
+        axios.delete('http://localhost:8000/api/' + playerId)
         .then((res) => {
-            const deletedPlayer = res.data;
-            console.log(deletedPlayer);
-            const filteredPlayers = allPlayers.filter((player) => player._id !== id);
-            setAllPlayers(filteredPlayers);
+            removeFromDom(playerId)
         });
     }
 

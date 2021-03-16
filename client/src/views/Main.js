@@ -14,8 +14,8 @@ const Main =  () => {
             });
     }, []);
 
-    const removeFromDom = id => {
-        setPlayers(players.filter(player => player._id !== id));
+    const removeFromDom = playerId => {
+        setPlayers(players.filter(player => player._id !== playerId));
     };
 
     return (
